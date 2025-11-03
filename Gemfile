@@ -4,7 +4,8 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "0.31.0.rc2"
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }.freeze
+gem "decidim", DECIDIM_VERSION
 # gem "decidim-ai", "0.31.0.rc2"
 # gem "decidim-collaborative_texts", "0.31.0.rc2"
 # gem "decidim-conferences", "0.31.0.rc2"
@@ -22,7 +23,7 @@ group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
   gem "brakeman", "~> 7.0"
-  gem "decidim-dev", "0.31.0.rc2"
+  gem "decidim-dev", DECIDIM_VERSION
   gem "net-imap", "~> 0.5.0"
   gem "net-pop", "~> 0.1.1"
 end
