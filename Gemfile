@@ -38,6 +38,8 @@ group :development do
 end
 
 group :production do
+  gem "sidekiq"
+  gem "sidekiq-cron"
 end
 
 gem "commonmarker", "= 0.23.12"

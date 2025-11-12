@@ -343,6 +343,9 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
+    cronex (0.15.0)
+      tzinfo
+      unicode (>= 0.4.4.5)
     css_parser (1.21.1)
       addressable
     csv (3.3.5)
@@ -400,6 +403,8 @@ GEM
       temple
     erubi (1.13.1)
     escape_utils (1.3.0)
+    et-orbi (1.4.0)
+      tzinfo
     excon (1.3.0)
       logger
     extended-markdown-filter (0.7.0)
@@ -431,6 +436,9 @@ GEM
       fog-core (>= 1.27, < 3.0)
     formatador (1.2.2)
       reline
+    fugit (1.12.1)
+      et-orbi (~> 1.4)
+      raabro (~> 1.4)
     gemoji (3.0.1)
     geocoder (1.8.6)
       base64 (>= 0.1.0)
@@ -642,6 +650,7 @@ GEM
     public_suffix (6.0.2)
     puma (6.5.0)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.8.1)
     rack (2.2.21)
     rack-attack (6.8.0)
@@ -713,6 +722,8 @@ GEM
       tsort
     redcarpet (3.6.1)
     redis (4.8.1)
+    redis-client (0.26.1)
+      connection_pool
     regexp_parser (2.11.3)
     reline (0.6.2)
       io-console (~> 0.5)
@@ -828,6 +839,17 @@ GEM
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
       semantic_range (>= 2.3.0)
+    sidekiq (7.3.9)
+      base64
+      connection_pool (>= 2.3.0)
+      logger
+      rack (>= 2.2.4)
+      redis-client (>= 0.22.2)
+    sidekiq-cron (2.3.1)
+      cronex (>= 0.13.0)
+      fugit (~> 1.8, >= 1.11.1)
+      globalid (>= 1.0.1)
+      sidekiq (>= 6.5.0)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -858,6 +880,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
+    unicode (0.4.4.5)
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
     unicode-emoji (4.1.0)
@@ -924,6 +947,8 @@ DEPENDENCIES
   net-imap (~> 0.5.0)
   net-pop (~> 0.1.1)
   puma (>= 6.3.1)
+  sidekiq
+  sidekiq-cron
   web-console (~> 4.2)
 
 RUBY VERSION
