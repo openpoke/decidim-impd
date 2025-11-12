@@ -117,4 +117,39 @@ end
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  #
+  if Decidim::Env.new("MAPS_PROVIDER").present? && Decidim::Env.new("MAPS_STATIC_PROVIDER", ENV.fetch("MAPS_PROVIDER", nil)).to_s.present?
+    static_provider = Decidim::Env.new("MAPS_STATIC_PROVIDER", ENV.fetch("MAPS_PROVIDER", nil)).to_s
+    dynamic_provider = Decidim::Env.new("MAPS_DYNAMIC_PROVIDER", ENV.fetch("MAPS_PROVIDER", nil)).to_s
+    dynamic_url = Decidim::Env.new("MAPS_DYNAMIC_URL")
+    static_url = Decidim::Env.new("MAPS_STATIC_URL")
+    static_url = "https://image.maps.hereapi.com/mia/v3/base/mc/overlay" if static_provider == "here" && static_url.blank?
+    config.maps = {
+      provider: static_provider,
+      api_key: Decidim::Env.new("MAPS_STATIC_API_KEY", ENV.fetch("MAPS_API_KEY", nil)).to_s,
+      static: { url: static_url },
+      dynamic: {
+        provider: dynamic_provider,
+        api_key: Decidim::Env.new("MAPS_DYNAMIC_API_KEY", ENV.fetch("MAPS_API_KEY", nil)).to_s
+      }
+    }
+    config.maps[:geocoding] = { host: Decidim::Env.new("MAPS_GEOCODING_HOST") } if Decidim::Env.new("MAPS_GEOCODING_HOST").present?
+    config.maps[:dynamic][:tile_layer] = {}
+    config.maps[:dynamic][:tile_layer][:url] = dynamic_url if dynamic_url
+    config.maps[:dynamic][:tile_layer][:attribution] = Decidim::Env.new("MAPS_ATTRIBUTION").to_json if Decidim::Env.new("MAPS_ATTRIBUTION").present?
+    if Decidim::Env.new("MAPS_EXTRA_VARS").present?
+      vars = URI.decode_www_form(Rails.application.secrets.maps[:extra_vars])
+      vars.each do |key, value|
+        # perform a naive type conversion
+        config.maps[:dynamic][:tile_layer][key] = case value
+                                                  when /^true$|^false$/i
+                                                    value.downcase == "true"
+                                                  when /\A[-+]?\d+\z/
+                                                    value.to_i
+                                                  else
+                                                    value
+                                                  end
+      end
+    end
+  end
 end
