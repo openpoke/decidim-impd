@@ -19,6 +19,9 @@ gem "bootsnap", "~> 1.3"
 
 gem "puma", ">= 6.3.1"
 
+gem "health_check"
+gem "aws-sdk-s3", "~> 1.203"
+
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
@@ -38,3 +41,4 @@ group :production do
 end
 
 gem "commonmarker", "= 0.23.12"
+
