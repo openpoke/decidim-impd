@@ -44,3 +44,5 @@ end
 
 gem "commonmarker", "= 0.23.12"
 
+
+gem "decidim-elections", "~> 0.31.0.rc2"
