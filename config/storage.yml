@@ -14,6 +14,9 @@ s3:
   bucket: <%= Decidim::Env.new("AWS_BUCKET").to_s %>
   <%= "region: #{Decidim::Env.new("AWS_REGION").to_s}" if Decidim::Env.new("AWS_REGION").present? %>
   <%= "endpoint: #{ Decidim::Env.new("AWS_ENDPOINT").to_s}" if Decidim::Env.new("AWS_ENDPOINT").present? %>
+  public: <%= Decidim::Env.new("STORAGE_PUBLIC_LINKS").to_boolean_string %>
+  request_checksum_calculation: "when_required"
+  response_checksum_validation: "when_required"
 
 azure:
   service: AzureStorage
