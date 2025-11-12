@@ -25,7 +25,7 @@ gem "aws-sdk-s3", "~> 1.203"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "brakeman", "~> 7.0"
+  gem "brakeman", "~> 7.1"
   gem "decidim-dev", DECIDIM_VERSION
   gem "net-imap", "~> 0.5.0"
   gem "net-pop", "~> 0.1.1"
