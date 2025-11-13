@@ -15,9 +15,10 @@ gem "decidim-elections", DECIDIM_VERSION
 # gem "decidim-initiatives", "0.31.0.rc2"
 # gem "decidim-templates", "0.31.0.rc2"
 
-gem "bootsnap", "~> 1.3"
-
 gem "aws-sdk-s3", "~> 1.203"
+gem "bootsnap", "~> 1.3"
+gem "commonmarker", "= 0.23.12"
+gem "deface", "~> 1.9"
 gem "health_check"
 gem "puma"
 gem "sentry"
@@ -42,5 +43,3 @@ group :production do
   gem "sidekiq"
   gem "sidekiq-cron"
 end
-
-gem "commonmarker", "= 0.23.12"
