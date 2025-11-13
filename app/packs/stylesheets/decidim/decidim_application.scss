@@ -6,3 +6,20 @@
 // available at https://docs.decidim.org/en/develop/customize/styles.html#_tailwind_css
 //
 // By default this is empty.
+
+// Pokecode logos
+.footer-logos {
+  @apply block;
+
+  a {
+    @apply inline-block mr-8;
+  }
+
+  svg {
+    @apply w-auto h-6;
+
+    path {
+      fill: white;
+    }
+  }
+}
