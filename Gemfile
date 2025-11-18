@@ -16,7 +16,7 @@ gem "decidim-elections", DECIDIM_VERSION
 # gem "decidim-templates", "0.31.0.rc2"
 
 gem "aws-sdk-s3", "~> 1.203"
-gem "bootsnap", "~> 1.3"
+gem "bootsnap", "~> 1.19"
 gem "commonmarker", "= 0.23.12"
 gem "deface", "~> 1.9"
 gem "health_check"
