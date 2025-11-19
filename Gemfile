@@ -6,6 +6,7 @@ ruby RUBY_VERSION
 
 DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }.freeze
 gem "decidim", DECIDIM_VERSION
+gem "decidim-decidim_awesome", { github: "decidim-ice/decidim-module-decidim_awesome", branch: "release/0.31-stable" }
 gem "decidim-elections", DECIDIM_VERSION
 # gem "decidim-ai", "0.31.0.rc2"
 # gem "decidim-collaborative_texts", "0.31.0.rc2"
