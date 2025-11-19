@@ -4,14 +4,21 @@
   "dependencies": {
     "@decidim/browserslist-config": "file:packages/browserslist-config",
     "@decidim/core": "file:packages/core",
-    "@decidim/webpacker": "file:packages/webpacker"
+    "codemirror": "^5.65.20",
+    "form-storage": "^1.3.5",
+    "formBuilder": "^3.21.1",
+    "formbuilder-languages": "^1.2.0",
+    "inline-attacher": "^0.0.7",
+    "jsrender": "^1.0.16",
+    "leaflet.featuregroup.subgroup": "^1.0.2"
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@decidim/dev": "file:packages/dev",
-    "@decidim/eslint-config": "file:packages/eslint-config",
-    "@decidim/prettier-config": "file:packages/prettier-config",
-    "@decidim/stylelint-config": "file:packages/stylelint-config",
+    "@decidim/dev": "^0.31.0-rc2",
+    "@decidim/eslint-config": "^0.31.0-rc2",
+    "@decidim/prettier-config": "^0.31.0-rc2",
+    "@decidim/stylelint-config": "^0.31.0-rc2",
+    "@decidim/webpacker": "^0.31.0-rc2",
     "shakapacker": "^8.3.0"
   },
   "browserslist": [

@@ -8,13 +8,13 @@ DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }.f
 gem "decidim", DECIDIM_VERSION
 gem "decidim-decidim_awesome", { github: "decidim-ice/decidim-module-decidim_awesome", branch: "release/0.31-stable" }
 gem "decidim-elections", DECIDIM_VERSION
-# gem "decidim-ai", "0.31.0.rc2"
-# gem "decidim-collaborative_texts", "0.31.0.rc2"
-# gem "decidim-conferences", "0.31.0.rc2"
-# gem "decidim-demographics", "0.31.0.rc2"
-# gem "decidim-design", "0.31.0.rc2"
-# gem "decidim-initiatives", "0.31.0.rc2"
-# gem "decidim-templates", "0.31.0.rc2"
+# gem "decidim-ai", DECIDIM_VERSION
+# gem "decidim-collaborative_texts", DECIDIM_VERSION
+# gem "decidim-conferences", DECIDIM_VERSION
+# gem "decidim-demographics", DECIDIM_VERSION
+# gem "decidim-design", DECIDIM_VERSION
+# gem "decidim-initiatives", DECIDIM_VERSION
+# gem "decidim-templates", DECIDIM_VERSION
 
 gem "aws-sdk-s3", "~> 1.203"
 gem "bootsnap", "~> 1.3"
