@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
-  revision: ba7ead1e9021efbe6dbe63d25bf511f10e3adfd2
+  revision: e763fa6fb37724dba4e48c926171d07d0e6e1c6e
   branch: release/0.31-stable
   specs:
     decidim-decidim_awesome (0.14.0)
@@ -509,7 +509,7 @@ GEM
     html-pipeline (2.14.3)
       activesupport (>= 2)
       nokogiri (>= 1.4)
-    htmlentities (4.4.1)
+    htmlentities (4.4.2)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     i18n-tasks (1.1.0)
