@@ -4,10 +4,12 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }.freeze
+DECIDIM_VERSION = "0.31.0"
+
 gem "decidim", DECIDIM_VERSION
 gem "decidim-decidim_awesome", { github: "decidim-ice/decidim-module-decidim_awesome", branch: "release/0.31-stable" }
 gem "decidim-elections", DECIDIM_VERSION
+gem "decidim-term_customizer", { github: "openpoke/decidim-module-term_customizer", branch: "release/0.31-stable" }
 # gem "decidim-ai", DECIDIM_VERSION
 # gem "decidim-collaborative_texts", DECIDIM_VERSION
 # gem "decidim-conferences", DECIDIM_VERSION
