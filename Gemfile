@@ -18,7 +18,7 @@ gem "decidim-term_customizer", { github: "openpoke/decidim-module-term_customize
 # gem "decidim-initiatives", DECIDIM_VERSION
 # gem "decidim-templates", DECIDIM_VERSION
 
-gem "aws-sdk-s3", "~> 1.203"
+gem "aws-sdk-s3", "~> 1.205"
 gem "bootsnap", "~> 1.3"
 gem "commonmarker", "= 0.23.12"
 gem "deface", "~> 1.9"
