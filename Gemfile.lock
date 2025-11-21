@@ -879,7 +879,7 @@ GEM
       websocket (~> 1.0)
     semantic_range (3.1.0)
     sentry (0.5.3)
-    sentry-ruby (6.1.0)
+    sentry-ruby (6.1.1)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
     shakapacker (8.3.0)
