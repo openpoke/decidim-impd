@@ -1,0 +1,24 @@
+---
+ca:
+  activemodel:
+    attributes:
+      token_csv_flexible:
+        file: Fitxer
+  decidim:
+    elections:
+      censuses:
+        token_csv_flexible:
+          example: |
+            id;token
+            usuari123;ABC123
+            membre456;XYZ789
+          info_html: |
+            Ha de ser un fitxer en format CSV amb dues columnes, una amb qualsevol ID i una altra amb el valor d'un token que l'usuari haurà d'introduir per poder votar.
+            Les capçaleres són obligatòries (id;token).
+            Ha d'estar separat amb punt i coma (;)
+          label: Participants no registrats amb ID flexible (fix)
+        token_csv_flexible_form:
+          id: ID
+          id_placeholder: Introdueix l'ID del votant
+          invalid: L'ID o el token no és vàlid. Si us plau, comprova les dades i torna-ho
+            a provar.

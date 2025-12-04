@@ -1,0 +1,4 @@
+<%= form.text_field :id, label: t(".id"), placeholder: t(".id_placeholder"), autofocus: true, required: true %>
+<%= form.text_field :token, label: t("decidim.elections.censuses.token_csv_form.token"), placeholder: t("decidim.elections.censuses.token_csv_form.token_placeholder"), required: true %>
+
+<%= render "decidim/elections/censuses/submit_button", form: form %>

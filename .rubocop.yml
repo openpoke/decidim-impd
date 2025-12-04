@@ -1,2 +1,13 @@
 inherit_gem:
   decidim-dev: rubocop-decidim.yml
+
+AllCops:
+  Exclude:
+    - 'db/**/*.rb'
+    - 'vendor/**/*'
+
+Rails/FilePath:
+  Enabled: false
+
+RSpec/IndexedLet:
+  Enabled: false

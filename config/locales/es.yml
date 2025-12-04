@@ -1,0 +1,24 @@
+---
+es:
+  activemodel:
+    attributes:
+      token_csv_flexible:
+        file: Archivo
+  decidim:
+    elections:
+      censuses:
+        token_csv_flexible:
+          example: |
+            id;token
+            usuario123;ABC123
+            miembro456;XYZ789
+          info_html: |
+            Debe ser un archivo en formato CSV con dos columnas, una con cualquier ID y otra con el valor de un token que el usuario tendrá que introducir para poder votar.
+            Las cabeceras son obligatorias (id;token).
+            Debe estar separado con punto y coma (;)
+          label: Participantes no registrados con ID flexible (fijo)
+        token_csv_flexible_form:
+          id: ID
+          id_placeholder: Introduce el ID del votante
+          invalid: El ID o el token no es válido. Por favor, comprueba los datos e inténtalo
+            de nuevo.
