@@ -14,6 +14,7 @@ en:
             member456;XYZ789
           info_html: |
             Must be a file in CSV format with two columns, one with any ID and another with the value of a token that the user will have to introduce in order to vote.
+            Headers are mandatory (id;token).
             It must be separated with a semicolon (;)
           label: Unregistered participants with flexible ID (fixed)
         token_csv_flexible_form:
