@@ -1,5 +1,9 @@
 ---
 en:
+  activemodel:
+    attributes:
+      token_csv_flexible:
+        file: File
   decidim:
     elections:
       censuses:
