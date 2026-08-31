@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
-  revision: 0838900e4aca71fe5fb289a2db1a7eb3a4b6643d
+  revision: 6351cdc9f414b642f713392a760f47c77ac8f947
   branch: release/0.31-stable
   specs:
-    decidim-decidim_awesome (0.14.0)
+    decidim-decidim_awesome (0.14.2)
       active_hashcash (~> 0.4.0)
       decidim-admin (>= 0.31.0, < 0.32)
       decidim-core (>= 0.31.0, < 0.32)
@@ -12,7 +12,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-term_customizer.git
-  revision: 8cd8bafc273b34ff7dae7c0dcbf231062aa68466
+  revision: 51b372309f6da37981046c09b1e21f2cddf0ae64
   specs:
     decidim-term_customizer (0.31)
       decidim-admin (~> 0.31.0)
@@ -139,7 +139,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.19.0)
       msgpack (~> 1.2)
-    brakeman (7.1.1)
+    brakeman (7.1.2)
       racc
     browser (6.2.0)
     builder (3.3.0)
@@ -598,7 +598,7 @@ GEM
       bigdecimal (~> 3.1)
     net-http (0.8.0)
       uri (>= 0.11.1)
-    net-imap (0.5.12)
+    net-imap (0.5.15)
       date
       net-protocol
     net-pop (0.1.2)
@@ -887,12 +887,12 @@ GEM
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
       semantic_range (>= 2.3.0)
-    sidekiq (7.3.9)
+    sidekiq (7.3.10)
       base64
-      connection_pool (>= 2.3.0)
+      connection_pool (>= 2.3.0, < 3)
       logger
-      rack (>= 2.2.4)
-      redis-client (>= 0.22.2)
+      rack (>= 2.2.4, < 3.3)
+      redis-client (>= 0.23.0, < 1)
     sidekiq-cron (2.3.1)
       cronex (>= 0.13.0)
       fugit (~> 1.8, >= 1.11.1)
